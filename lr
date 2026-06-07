@@ -1,0 +1,16 @@
+[main]
+    goto: build
+    goto:teste
+    end
+
+[build]
+    time_start: build
+    run: go build golr.go
+    time_end: build
+    end
+
+[teste]
+    silent: 0
+    run: .\golr steal _
+
+    end
