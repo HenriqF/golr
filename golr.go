@@ -281,20 +281,18 @@ func main() {
 				return err
 			}
 			if !d.IsDir() && d.Name() == target {
-				fmt.Println(d.Name(), path)
-
 				data, err := os.ReadFile(path)
 				if err != nil {
-					log.Fatalf("deu merda roubando")
+					log.Fatalf("deu merda roubando\n")
 				}
 
 				dest := workdir + "/lr"
 				err = os.WriteFile(dest, data, 0666)
 				if err != nil {
-					log.Fatalf("deu merda roubando")
+					log.Fatalf("deu merda roubando\n")
 				}
 
-				fmt.Printf("roubado primeiro [%v] de [%v]", d.Name(), path)
+				fmt.Printf("roubado primeiro [%v] de [%v]\n", d.Name(), path)
 				os.Exit(0)
 			}
 			return nil

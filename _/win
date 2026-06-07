@@ -11,6 +11,6 @@
 
 [teste]
     silent: 0
-    run: ./golr steal lin
+    run: .\golr steal _
 
     end
